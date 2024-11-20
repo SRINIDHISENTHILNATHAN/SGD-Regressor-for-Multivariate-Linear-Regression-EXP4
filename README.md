@@ -9,14 +9,25 @@ To write a program to predict the price of the house and number of occupants in 
 
 ## Algorithm
 
-1. Import Required Libraries
-2. Load the Dataset
-3. Prepare Features and Targets
-4. Split the Dataset
-5. Train the Model
-6. Make Predictions
-7. Evaluate the Model
-8. Display Predictions
+1.Import Libraries and Load Dataset: Import necessary libraries and load the California Housing dataset, converting it into a DataFrame.
+
+2.elect Features and Targets: Define X (features) as the first three columns and Y (targets) as a combination of the target and an additional feature (7th column).
+
+3.Split Data: Use train_test_split to split X and Y into training and testing sets.
+
+4.Scale Features and Targets: Apply StandardScaler to normalize both X and Y in training and testing sets.
+
+5.Define and Train Model: Initialize SGDRegressor and wrap it in MultiOutputRegressor to handle multiple outputs, then fit on the scaled training data.
+
+6.Predict and Inverse Transform: Predict on the test set, then inverse-transform predictions and targets to the original scale.
+
+7.Evaluate Model: Calculate and display the Mean Squared Error (MSE) and display the first few predictions.
+
+
+
+
+
+
 ## Program:
 ```
 Program to implement the multivariate linear regression model for predicting the price of the house and number of occupants in the house with SGD regressor.
